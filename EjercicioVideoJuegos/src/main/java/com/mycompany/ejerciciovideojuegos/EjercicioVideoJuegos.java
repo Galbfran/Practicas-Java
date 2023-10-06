@@ -22,11 +22,15 @@ public class EjercicioVideoJuegos {
         catalogo.add(new Videojuegos(3, "Rapidos y Furiosos", "Xbox", 2, "Carreras"));
         
         for (Videojuegos juego : catalogo) {
-            juego.getCaracteristicas();
+            System.out.println(juego.toString());
         }
         System.out.println("---------------------------------------------");
         catalogo.get(1 ).setCategoria("Deportes");
         catalogo.get(2).setCategoria("Depostes");
+        
+        
+        
+        
         //mostrar modidificaiones
           for (Videojuegos juego : catalogo) {
             juego.getCaracteristicas();

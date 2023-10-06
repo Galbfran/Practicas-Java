@@ -69,6 +69,11 @@ public class Videojuegos {
     public void getCaracteristicas(){
         System.out.println("El juego es "+ getTitulo() + ". Para la consola: " + getConsola() + " . La cantidad de jugadores es:" + getCantidadJugadores() + " .Categoria: " + getCategoria() );
     }
+
+    @Override
+    public String toString() {
+        return "Videojuegos{" + "codigo=" + codigo + ", titulo=" + titulo + ", consola=" + consola + ", CantidadJugadores=" + CantidadJugadores + ", categoria=" + categoria + '}';
+    }
     
     
 }
