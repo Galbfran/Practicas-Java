@@ -12,6 +12,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Query;
 import javax.persistence.EntityNotFoundException;
+import javax.persistence.Persistence;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
@@ -24,11 +25,13 @@ public class AlumnoJpaController implements Serializable {
     public AlumnoJpaController(EntityManagerFactory emf) {
         this.emf = emf;
     }
+    
+    public AlumnoJpaController(){
+        emf = Persistence.createEntityManagerFactory("pruebaJPAPU");
+    }
+    
     private EntityManagerFactory emf = null;
 
-    AlumnoJpaController() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 
     public EntityManager getEntityManager() {
         return emf.createEntityManager();

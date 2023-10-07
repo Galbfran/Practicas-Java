@@ -1,8 +1,12 @@
 package com.mycompany.jpaejemplo;
 
+import com.mycompany.jpaejemplo.Persistencia.ControladoraPersistencia;
+
 public class JpaEjemplo {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        
+        ControladoraPersistencia controlPersis = new ControladoraPersistencia();
+        
     }
 }

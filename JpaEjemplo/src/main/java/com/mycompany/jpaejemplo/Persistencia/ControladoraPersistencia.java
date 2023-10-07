@@ -8,10 +8,8 @@ package com.mycompany.jpaejemplo.Persistencia;
  *
  * @author HP
  */
-public class ControladorPersistencia {
+public class ControladoraPersistencia {
     
-    AlumnoJpaController aluJPA = new AlumnoJpaController();
-    
-    
+    AlumnoJpaController aluJpa = new AlumnoJpaController();
     
 }
