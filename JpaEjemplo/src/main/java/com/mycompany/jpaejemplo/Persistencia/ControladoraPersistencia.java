@@ -4,6 +4,8 @@
  */
 package com.mycompany.jpaejemplo.Persistencia;
 
+import com.mycompany.jpaejemplo.Logica.Alumno;
+
 /**
  *
  * @author HP
@@ -11,5 +13,9 @@ package com.mycompany.jpaejemplo.Persistencia;
 public class ControladoraPersistencia {
     
     AlumnoJpaController aluJpa = new AlumnoJpaController();
+
+    public void crearAlumno(Alumno alu) {
+        aluJpa.create(alu);
+    }
     
 }
