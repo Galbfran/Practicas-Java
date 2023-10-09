@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class aplicacionController {
     @GetMapping("/propiedad/{id}")
-
     public PropiedadDTO devolverPropiedad(@PathVariable Long id){
         Propiedad prop = new Propiedad(123L, "casa", "peron 586" , 200.2 , 4000.0);
         Inquilino inqui = new Inquilino(1L , "132456" , "franco" , "glabiati", "programador");
