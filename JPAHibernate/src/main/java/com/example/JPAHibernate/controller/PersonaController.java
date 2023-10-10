@@ -13,12 +13,12 @@ public class PersonaController {
     @Autowired
     IPersonaService persoServ;
 
-    @GetMapping("/personas/traer")
+    @GetMapping("/persona/traer")
     public List<Persona> getPersona(){
         return persoServ.getPersonas();
     }
 
-    @PostMapping("/personas/crear")
+    @PostMapping("/persona/crear")
     public String savePersona(@RequestBody Persona perso){
         persoServ.savePersona(perso);
         return "La persona fue creada correctamente";
@@ -42,6 +42,10 @@ public class PersonaController {
 
     }
 
-
+    @PutMapping("/persona/editar")
+    public Persona editPersona(@RequestBody Persona per){
+        persoServ.editPersona(per);
+        return  persoServ.findPersona(per.getId());
+    }
 
 }
